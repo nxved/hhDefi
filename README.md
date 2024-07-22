@@ -1,25 +1,28 @@
-# Decentralized Prescription Management DApp
+# Staking and Borrowing DApp on CoreDao Testnet
 
 ## Overview
-
-Decentralized Prescription Management is a dApp built on the CoreDao blockchain as HackerHouse Gao task for CoreDao  track that facilitates secure and decentralized management of prescriptions. This dApp allows hospitals to create prescriptions, pharmacies to mark prescriptions as filled, and patients to view their prescription history. The platform ensures data integrity, privacy, and security by leveraging blockchain technology.
+This Staking and Borrowing DApp is built on the CoreDao blockchain to facilitate decentralized finance operations such as staking tokens to earn rewards and borrowing tokens against staked assets. The platform ensures transparency, security, and efficiency by leveraging blockchain technology.
 
 ## Features
 
-- **Hospital Registration**: Hospitals can register on the platform to create prescriptions for patients.
-- **Pharmacy Registration**: Pharmacies can register to mark prescriptions as filled.
-- **Patient Prescription History**: Patients can view their prescription history.
-- **Prescription Creation**: Hospitals can create prescriptions for patients.
-- **Prescription Fulfillment**: Pharmacies can mark prescriptions as filled.
+Token Staking: Users can stake their tokens to earn rewards.
+
+Token Borrowing: Users can borrow tokens by staking their existing tokens as collateral.
+
+Dynamic Interest Rates: The borrowing interest rate adjusts dynamically based on the platform’s utilization rate.
+
+Reward Calculation: Users earn rewards based on the amount of tokens staked and the duration of staking.
+
+Role-Based Access Control: Administrators can set interest rates and reward rates.
 
 ## Smart Contracts
 
 The DApp interacts with two smart contracts deployed on the Core DAO testnet:
 
-1. **Prescription Management Contract**: Manages the creation and status of prescriptions.
-   - Contract Address: [0xdA09d91E0C34E4E17e1F012c4c0d2D5180EFCcBB](https://scan.test.btcs.network/address/0xdA09d91E0C34E4E17e1F012c4c0d2D5180EFCcBB)
-2. **Registration Vault Contract**: Handles the registration of hospitals and pharmacies.
-   - Contract Address: [0xBB76Af96713C7EF357d4326818d4d1B2C6B8A08D](https://scan.test.btcs.network/address/0xBB76Af96713C7EF357d4326818d4d1B2C6B8A08D)
+1. **DefiPlatform Contract**: Manages the creation and status of prescriptions.
+   - Contract Address: [0x1748A13Af65400808146615A6FBAda941C5eadDF](https://scan.test.btcs.network/address/0x1748A13Af65400808146615A6FBAda941C5eadDF)
+2. **Token Contract**: Handles the registration of hospitals and pharmacies.
+   - Contract Address: [0xabCE63e2d95486862B88d1BA04A8AA75e6f023ae](https://scan.test.btcs.network/address/0xabCE63e2d95486862B88d1BA04A8AA75e6f023ae)
 
 ## Technology Stack
 
@@ -40,8 +43,8 @@ The DApp interacts with two smart contracts deployed on the Core DAO testnet:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/decentralized-prescription-management.git
-   cd decentralized-prescription-management
+   git clone https://github.com/nxved/hhDefi.git
+   cd hhDefi
    ```
 2. Install dependencies:
 
