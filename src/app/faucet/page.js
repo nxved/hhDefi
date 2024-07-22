@@ -33,7 +33,7 @@ export default function BorrowRepay() {
       const user = await contract.balanceOf(address);
       setBalance(formatUnits(BigInt(user), 18));
     } catch (error) {
-      toast.error(error.message);
+      console.log(error.message);
     }
   };
 

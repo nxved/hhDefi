@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useWeb3Modal } from "@web3modal/ethers/react";
+import { useWeb3Modal, useSwitchNetwork } from "@web3modal/ethers/react";
 import { ethers, parseUnits, formatUnits } from "ethers";
 import { toast } from "react-toastify";
 import {
@@ -8,13 +8,13 @@ import {
   useWeb3ModalAccount,
 } from "@web3modal/ethers/react";
 import { BrowserProvider, Contract } from "ethers";
-import { defiContract, tokenContract } from "../utils/config";
+import { chainConfig, defiContract, tokenContract } from "../utils/config";
 import Loader from "./components/loader";
 
 export default function Dashboard() {
   const { open } = useWeb3Modal();
   const [loader, setLoader] = useState(false);
-  const { address, isConnected } = useWeb3ModalAccount();
+  const { address, isConnected, chainId } = useWeb3ModalAccount();
   const { walletProvider } = useWeb3ModalProvider();
 
   const [stakeAmount, setStakeAmount] = useState("");
@@ -22,12 +22,20 @@ export default function Dashboard() {
   const [staked, setStaked] = useState("0");
   const [rewards, setRewards] = useState("0");
   const [rewardRate, setRewardRate] = useState("0");
+  const { switchNetwork } = useSwitchNetwork();
 
   useEffect(() => {
     if (isConnected) {
       fetchUserInfo();
     }
   }, [isConnected]);
+
+  useEffect(() => {
+    if (isConnected) {
+      switchNetwork(chainConfig.id);
+      fetchUserInfo();
+    }
+  }, [chainId]);
 
   const handleWallet = () => {
     open();
@@ -49,7 +57,7 @@ export default function Dashboard() {
       setRewardRate(rewardRate.toString());
       setRewards(formatUnits(rewards, 18));
     } catch (error) {
-      toast.error(error.message);
+      console.log(error.message);
     }
   };
 
