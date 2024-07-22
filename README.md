@@ -6,9 +6,13 @@ This Staking and Borrowing DApp is built on the CoreDao blockchain to facilitate
 ## Features
 
 Token Staking: Users can stake their tokens to earn rewards.
+
 Token Borrowing: Users can borrow tokens by staking their existing tokens as collateral.
+
 Dynamic Interest Rates: The borrowing interest rate adjusts dynamically based on the platform’s utilization rate.
+
 Reward Calculation: Users earn rewards based on the amount of tokens staked and the duration of staking.
+
 Role-Based Access Control: Administrators can set interest rates and reward rates.
 
 ## Smart Contracts
