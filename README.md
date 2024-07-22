@@ -39,8 +39,8 @@ The DApp interacts with two smart contracts deployed on the Core DAO testnet:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/decentralized-prescription-management.git
-   cd decentralized-prescription-management
+   git clone https://github.com/nxved/hhDefi.git
+   cd hhDefi
    ```
 2. Install dependencies:
 
